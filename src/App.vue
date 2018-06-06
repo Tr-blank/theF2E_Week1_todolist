@@ -1,11 +1,15 @@
 <template>
-  <div id="app">
+  <body id="app">
+    <noscript>
+      <strong>We're sorry but thr doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">My Tasks</router-link> |
+      <router-link to="/about">In Progress</router-link>
+      <router-link to="/about">Completed</router-link>
     </div>
     <router-view/>
-  </div>
+  </body>
 </template>
 
 <style lang="stylus">
