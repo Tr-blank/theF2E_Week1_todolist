@@ -2,9 +2,9 @@
   <div class="home">
    <div class="homeHeader">
       <div class="homeNav navThree-now1">
-        <a class="navItem now" >My Tasks</a>
-        <a class="navItem" >In Progress</a>
-        <a class="navItem" >Completed</a>
+        <a class="homeNavItem now" >My Tasks</a>
+        <a class="homeNavItem" >In Progress</a>
+        <a class="homeNavItem" >Completed</a>
       </div>
     </div>
     <main>

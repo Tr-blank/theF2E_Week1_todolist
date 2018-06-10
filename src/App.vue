@@ -3,90 +3,19 @@
     <noscript>
       <strong>We're sorry but thr doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <label for="navControl"><i class="fas fa-bars"></i></label>
+    <input class="hide" type="checkbox" id="navControl">
     <header>
-      <nav class="navThree-now1">
-        <router-link class="navItem now" to="/">My Tasks</router-link>
-        <router-link class="navItem" to="/about">In Progress</router-link>
-        <router-link class="navItem" to="/about">Completed</router-link>
+      <label for="navControl"><i class="fas fa-times"></i></label>
+      <h1>第一周 待辦清單｜提亞</h1>
+      <h2>The F2E - 前端修練精神時光屋 前端工程組</h2>
+      <nav class="navMain">
+        <!-- <router-link class="navItem " to="/">個人設計</router-link> -->
+        <router-link class="navItem now" to="/original">官方設計</router-link>
       </nav>
     </header>
-    <main>
-      <div class="listItem">
-        <div class="listTitle">
-          <div>
-              <i class="icon fas fa-check-square"></i>
-              <span class="title">Type Something Here...</span>
-          </div>
-          <div>
-            <i class="icon far fa-star"></i>
-            <i class="icon fas fa-pencil-alt"></i>
-          </div>
-        </div>
-        <ul class="listContent">
-          <li class="listContentLine"><i class="far fa-calendar-alt"></i><span class="listContentTitle">Deadline</span>
-            <input class="deadline_date" type="date" value="2018/5/14">
-            <input class="deadline_time" type="time" value="14:30">
-          </li>
-          <li class="listContentLine"><i class="far fa-file"></i><span class="listContentTitle">File</span><input type="file"></li>
-          <li class="listContentLine"><i class="far fa-comment-dots"></i><span class="listContentTitle">Comment</span><textarea></textarea></li>
-          <li>
-            <button class="buttonCancel"><i class="fas fa-times"></i>Cancel</button>
-            <button class="buttonMain"><i class="fas fa-plus"></i>AddTask</button>
-          </li>
-        </ul>
-      </div>
-      <div class="listItem list-Important">
-        <div class="listTitle">
-          <div>
-            <i class="icon fas fa-check-square"></i>
-            <span class="title">Type Something Here...</span>
-          </div>
-          <div>
-            <i class="icon far fa-star"></i>
-            <i class="icon fas fa-pencil-alt"></i>
-          </div>
-        </div>
-      </div>
-      <div class="listItem ">
-        <div class="listTitle">
-          <div>
-            <i class="icon fas fa-check-square"></i>
-            <span class="title">Type Something Here...</span>
-          </div>
-          <div>
-            <i class="icon far fa-star"></i>
-            <i class="icon fas fa-pencil-alt"></i>
-          </div>
-        </div>
-      </div>
-      <div class="listItem list-Complete">
-        <div class="listTitle">
-          <div>
-            <i class="icon fas fa-check-square"></i>
-            <span class="title">Type Something Here...</span>
-          </div>
-          <div>
-            <i class="icon far fa-star"></i>
-            <i class="icon fas fa-pencil-alt"></i>
-          </div>
-        </div>
-      </div>
-      <div class="listItem list-Complete list-Important">
-        <div class="listTitle">
-          <div>
-            <i class="icon fas fa-check-square"></i>
-            <span class="title">Type Something Here...</span>
-          </div>
-          <div>
-            <i class="icon far fa-star"></i>
-            <i class="icon fas fa-pencil-alt"></i>
-          </div>
-        </div>
-      </div>
-      <div class="listTotal">4 tasks left</div>
-    </main>
-    <!-- <router-view/> -->
-    <footer>Copyright © 2018 By 提亞 All rights reserved</footer>
+    <router-view/>
+
   </body>
 </template>
 
@@ -94,4 +23,37 @@
 @import 'stylus/normalize'
 @import 'stylus/basic'
 @import 'stylus/home'
+header
+  position: fixed;
+  width: 320px;
+  height: 100%;
+  background-color:#f2f2f2
+  z-index: 100;
+  right: -320px;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+  transition: right .25s ease
+  .fa-times
+    font-size 1.6rem
+    padding 15px
+    position absolute
+    top 0
+    right  0
+    z-index  110
+.fa-bars
+    font-size 1.6rem
+    padding 15px
+    position fixed
+    top 0
+    right  0
+    z-index  10
+#navControl:checked
+  + header
+    right 0
+h1
+  font-size 1.3rem
+  line-height 2rem
+h2
+  font-size .9rem
+  line-height 2rem
 </style>
