@@ -73,7 +73,7 @@
             </span>
 
           </li>
-          <li class="listContentLine"><i class="far fa-comment-dots"></i><span class="listContentTitle">Comment</span><textarea>{{list.comment}}</textarea></li>
+          <li class="listContentLine"><i class="far fa-comment-dots"></i><span class="listContentTitle">Comment</span><textarea v-model="list.comment"></textarea></li>
           <li>
             <button @click="addItem_Important" class="buttonCancel"><i class="fas fa-times"></i>Cancel</button>
             <button class="buttonMain"><i class="fas fa-plus"></i>Save</button>
@@ -161,7 +161,7 @@ export default {
         fileName:'2018-06-06',
         comment:'一些內容...5'
       }],
-      addOpen:true,
+      addOpen:false,
       addItem_data:{
         title:'Type Something Here...',
         ItemStatus: {
