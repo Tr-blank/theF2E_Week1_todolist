@@ -18,7 +18,7 @@
             <input class="title" type="text" v-model="addItem_data.title">
           </div>
           <div v-if="addOpen">
-            <i @click="click_Important(list)" :class="addItem_data.ItemStatus.item_important? 'icon fas fa-star':'icon far fa-star'"></i>
+            <i :class="addItem_data.ItemStatus.item_important? 'icon fas fa-star':'icon far fa-star'"></i>
             <i @click="addItem_open" class="icon fas fa-pencil-alt"></i>
           </div>
         </div>
@@ -47,15 +47,23 @@
       </div>
       <div v-for="(list,index) in sortData " :key="index" v-if="pageChange(list)" :class="list.ItemStatus">
         <div class="listTitle">
-          <div @click="click_Complete(list)">
-            <i class="icon fas fa-check-square"></i>
-            <span class="title">{{list.title}}</span>
-          </div>
+          <div class="listTitle-info">
+            <i class="icon fas fa-check-square" @click="click_Complete(list)" ></i>
+            <div class="title">
+              <span v-if="!list.ItemStatus.item_modify">{{list.title}}</span>
+              <input v-if="list.ItemStatus.item_modify" class="title" type="text" v-model="list.title">
+              <div v-if="!list.ItemStatus.item_complete" class="title-icons">
+                <i class="far fa-calendar-alt"  v-if="list.itemDate != ''"></i>{{list.itemDate}}
+                <i class="far fa-file" v-if="list.fileName != ''"></i>
+                <i class="far fa-comment-dots"  v-if="list.comment != ''"></i>
+              </div>
+            </div>
+          </div> 
           <div>
             <i @click="click_Important(list)" :class="list.ItemStatus.item_important? 'icon fas fa-star':'icon far fa-star'"></i>
             <i @click="click_Modify(list)" class="icon fas fa-pencil-alt"></i>
           </div>
-        </div>
+        </div> 
         <ul class="listContent">
           <li class="listContentLine"><i class="far fa-calendar-alt"></i><span class="listContentTitle">Deadline</span>
             <input class="deadline_date" type="date" v-model="list.itemDate">
@@ -65,7 +73,7 @@
             <i class="far fa-file"></i>
             <span class="listContentTitle">File</span>
             <span class="uploadFile">
-              <span>檔名<span class="fileInfo">時間</span></span>
+              <span  v-if="list.fileTime != '' && list.fileName != ''">{{list.fileName}}<span class="fileInfo">{{list.fileTime}}</span></span>
               <label for="uploadFile">
                 <i class="fas fa-plus-square"></i>
                 <input class="hide" type="file" id="uploadFile">
@@ -73,9 +81,9 @@
             </span>
 
           </li>
-          <li class="listContentLine"><i class="far fa-comment-dots"></i><span class="listContentTitle">Comment</span><textarea v-model="list.comment"></textarea></li>
+          <li class="listContentLine"><i class="far fa-comment-dots"></i><span class="listContentTitle">Comment</span><textarea v-model="list.comment" placeholder="Type your memo here…"></textarea></li>
           <li>
-            <button @click="addItem_Important" class="buttonCancel"><i class="fas fa-times"></i>Cancel</button>
+            <button @click="click_Modify(list)" class="buttonCancel"><i class="fas fa-times"></i>Cancel</button>
             <button class="buttonMain"><i class="fas fa-plus"></i>Save</button>
           </li>
         </ul>
@@ -129,8 +137,8 @@ export default {
         },
         itemDate:'2018-06-06',
         itemTime:'18:00',
-        fileTime:'2018.png',
-        fileName:'2018-06-06',
+        fileTime:'',
+        fileName:'',
         comment:'一些內容...3'
       },{
         number:4,
@@ -145,7 +153,7 @@ export default {
         itemTime:'18:00',
         fileTime:'2018.png',
         fileName:'2018-06-06',
-        comment:'一些內容...4'
+        comment:''
       },{
         number:4,
         title:'Type Something Here...5',
@@ -157,9 +165,9 @@ export default {
         },
         itemDate:'2018-06-06',
         itemTime:'18:00',
-        fileTime:'2018.png',
-        fileName:'2018-06-06',
-        comment:'一些內容...5'
+        fileTime:'',
+        fileName:'',
+        comment:''
       }],
       addOpen:false,
       addItem_data:{
