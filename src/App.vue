@@ -14,90 +14,79 @@
       <div class="listItem">
         <div class="listTitle">
           <div>
-            <span></span>
-            <input type="text" placeholder="Type Something Here...">
+              <i class="icon fas fa-check-square"></i>
+              <span class="title">Type Something Here...</span>
           </div>
           <div>
-            <i>重要</i>
-            <i>修改</i>
+            <i class="icon far fa-star"></i>
+            <i class="icon fas fa-pencil-alt"></i>
           </div>
         </div>
-        <div class="listContent">
-          <div class="list"><i></i>Deadline</div>
-          <div class="list"><date></date><date></date></div>
-          <div class="list"><i></i>File</div>
-          <div class="list">+</div>
-          <div class="list"><i></i>Comment</div>
-          <div class="list"><textarea></textarea></div>
-          <div><button><i></i>Cancel</button><button><i></i>AddTask</button></div>
-        </div>
+        <ul class="listContent">
+          <li class="listContentLine"><i class="far fa-calendar-alt"></i><span class="listContentTitle">Deadline</span>
+            <input class="deadline_date" type="date" value="2018/5/14">
+            <input class="deadline_time" type="time" value="14:30">
+          </li>
+          <li class="listContentLine"><i class="far fa-file"></i><span class="listContentTitle">File</span><input type="file"></li>
+          <li class="listContentLine"><i class="far fa-comment-dots"></i><span class="listContentTitle">Comment</span><textarea></textarea></li>
+          <li>
+            <button class="buttonCancel"><i class="fas fa-times"></i>Cancel</button>
+            <button class="buttonMain"><i class="fas fa-plus"></i>AddTask</button>
+          </li>
+        </ul>
       </div>
-      <div class="listItem">
+      <div class="listItem list-Important">
         <div class="listTitle">
           <div>
-            <span></span>
-            <input type="text" placeholder="Type Something Here...">
+            <i class="icon fas fa-check-square"></i>
+            <span class="title">Type Something Here...</span>
           </div>
           <div>
-            <i>重要</i>
-            <i>修改</i>
+            <i class="icon far fa-star"></i>
+            <i class="icon fas fa-pencil-alt"></i>
           </div>
         </div>
-        <div class="listContent">
-          <div class="list"><i></i>Deadline</div>
-          <div class="list"><date></date><date></date></div>
-          <div class="list"><i></i>File</div>
-          <div class="list">+</div>
-          <div class="list"><i></i>Comment</div>
-          <div class="list"><textarea></textarea></div>
-          <div><button><i></i>Cancel</button><button><i></i>AddTask</button></div>
-        </div>
       </div>
-      <div class="listItem">
+      <div class="listItem ">
         <div class="listTitle">
           <div>
-            <span></span>
-            <input type="text" placeholder="Type Something Here...">
+            <i class="icon fas fa-check-square"></i>
+            <span class="title">Type Something Here...</span>
           </div>
           <div>
-            <i>重要</i>
-            <i>修改</i>
+            <i class="icon far fa-star"></i>
+            <i class="icon fas fa-pencil-alt"></i>
           </div>
         </div>
-        <div class="listContent">
-          <div class="list"><i></i>Deadline</div>
-          <div class="list"><date></date><date></date></div>
-          <div class="list"><i></i>File</div>
-          <div class="list">+</div>
-          <div class="list"><i></i>Comment</div>
-          <div class="list"><textarea></textarea></div>
-          <div><button><i></i>Cancel</button><button><i></i>AddTask</button></div>
-        </div>
       </div>
-      <div class="listItem">
+      <div class="listItem list-Complete">
         <div class="listTitle">
           <div>
-            <span></span>
-            <input type="text" placeholder="Type Something Here...">
+            <i class="icon fas fa-check-square"></i>
+            <span class="title">Type Something Here...</span>
           </div>
           <div>
-            <i>重要</i>
-            <i>修改</i>
+            <i class="icon far fa-star"></i>
+            <i class="icon fas fa-pencil-alt"></i>
           </div>
         </div>
-        <div class="listContent">
-          <div class="list"><i></i>Deadline</div>
-          <div class="list"><date></date><date></date></div>
-          <div class="list"><i></i>File</div>
-          <div class="list">+</div>
-          <div class="list"><i></i>Comment</div>
-          <div class="list"><textarea></textarea></div>
-          <div><button><i></i>Cancel</button><button><i></i>AddTask</button></div>
+      </div>
+      <div class="listItem list-Complete list-Important">
+        <div class="listTitle">
+          <div>
+            <i class="icon fas fa-check-square"></i>
+            <span class="title">Type Something Here...</span>
+          </div>
+          <div>
+            <i class="icon far fa-star"></i>
+            <i class="icon fas fa-pencil-alt"></i>
+          </div>
         </div>
       </div>
+      <div class="listTotal">4 tasks left</div>
     </main>
-    <router-view/>
-    <footer>Copyright © 2015 By 提亞 All rights reserved</footer>
+    <!-- <router-view/> -->
+    <footer>Copyright © 2018 By 提亞 All rights reserved</footer>
   </body>
 </template>
 

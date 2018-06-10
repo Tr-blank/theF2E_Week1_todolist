@@ -22,9 +22,10 @@ nav
   width: 33.33%;
   text-align: center;
   vertical-align: middle;
-  transition: color .25s ease
+  background-color: #4a90e2
+  transition: color .25s ease,background-color .25s ease
   &:hover
-    color #000
+    background-color: #3982D7
   &.now
     color #fff
 .navThree-now1::after
@@ -39,4 +40,89 @@ main
 .listItem
   margin 10px 0
   background-color: #F2F2F2
-  padding  10px
+  border-radius: 5px;
+  overflow: hidden;
+.listTitle
+  display: flex;
+  justify-content: space-between;
+  padding: 21px;
+  font-size: 1.5rem
+  background-color: #F2F2F2
+  transition: color .25s ease
+  .title
+    font-weight: bold
+.addtext
+  border: 0;
+  color: #000;
+  background-color: #f2f2f2;
+  padding: 5px;
+.icon
+  cursor pointer
+  margin:  5px 10px
+.fa-check-square
+  color: #fff;
+  background-color: #fff;
+  border-radius: 3px;
+  height: 23px;
+  transition: color .25s ease
+.list-Complete
+  .fa-check-square
+    color: #4A90E2
+  .title
+    transition: color .25s ease
+    color #9B9B9B
+    text-decoration: line-through;
+.list-Important
+  .listTitle
+    background-color: #FFF2DC
+    .fa-star
+      color #F5A623
+      transition: color .25s ease
+.listContent
+  border-top: 2px solid #C8C8C8;
+  .listContentTitle
+    display: block;
+    font-weight: bolder;
+    padding-bottom: 5px;
+  .far
+    position absolute
+    top 0
+    left -25px
+
+.listContentLine
+  margin: 20px 88px 0;
+  position relative
+.buttonCancel,
+.buttonMain
+  width: 50%;
+  border: 0;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-top: 20px;
+  padding: 16px;
+  cursor pointer
+  .fas
+    margin-right 10px
+    font-size: 1.3rem;
+.buttonCancel
+  background-color: #fff;
+  color: #D0021B;
+  transition:background-color .25s ease
+  &:hover
+    background-color: #FDFDFD
+.buttonMain
+  background-color: #4A90E2
+  color: #fff
+  transition:background-color .25s ease
+  &:hover
+    background-color: #3982D7
+.listTotal
+  color: #C8C8C8;
+  padding-left: 30px;
+  font-size: 1.5rem;
+  font-family 'Roboto-Italic','Avenir', Helvetica, Arial, sans-serif
+footer
+  text-align: center;
+  padding: 30px;
+  font-size: 0.75rem;
+  color: #757575;
