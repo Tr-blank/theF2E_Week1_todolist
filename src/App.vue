@@ -3,17 +3,17 @@
     <noscript>
       <strong>We're sorry but thr doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <label for="navControl"><i class="fas fa-bars"></i></label>
+    <!-- <label for="navControl"><i class="fas fa-bars"></i></label>
     <input class="hide" type="checkbox" id="navControl">
     <header>
       <label for="navControl"><i class="fas fa-times"></i></label>
       <h1>第一周 待辦清單｜提亞</h1>
       <h2>The F2E - 前端修練精神時光屋 前端工程組</h2>
       <nav class="navMain">
-        <!-- <router-link class="navItem " to="/">個人設計</router-link> -->
+         <router-link class="navItem " to="/">個人設計</router-link> 
         <router-link class="navItem now" to="/original">官方設計</router-link>
       </nav>
-    </header>
+    </header> -->
     <router-view/>
 
   </body>

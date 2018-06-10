@@ -38,6 +38,23 @@
 
 main
   x-inner()
+.addItem
+  margin  20px 0
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+.addTitle
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  font-size: 1.5rem
+  background-color: #fff
+  color #C8C8C8;
+  cursor pointer
+  transition: color .25s ease
+  .fa-plus
+    font-size: 1.2rem;
+    margin-right: 10px;
 .listItem
   margin 10px 0
   background-color: #F2F2F2
@@ -58,6 +75,8 @@ main
   color: #000;
   background-color: #f2f2f2;
   padding: 5px;
+.addButton
+  width 100%
 .icon
   cursor pointer
   margin:  5px 10px
@@ -80,17 +99,44 @@ main
     .fa-star
       color #F5A623
       transition: color .25s ease
+
+.item_modify
+  margin 20px 0
+  .fa-pencil-alt
+    color #4A90E2
+  .listContent
+    max-height: 450px
+.addItem-open
+  .listContent
+    max-height: 450px
+  .addTitle
+    color: #000;
+    background-color: #f2f2f2;
+  .title
+    border: 0;
+    background-color: #f2f2f2;
+    width: 420px;
 .listContent
   border-top: 2px solid #C8C8C8;
+  max-height: 0px
+  overflow hidden
+  transition: max-height .25s ease
   .listContentTitle
     display: block;
     font-weight: bolder;
     padding-bottom: 5px;
+    font-size: 1.25rem
   .far
     position absolute
-    top 0
+    top 4px
     left -25px
 
+textarea
+  width: 100%;
+  height: 120px;
+  border: 0;
+  padding 10px
+  border-radius: 5px;
 .listContentLine
   margin: 20px 88px 0;
   position relative
@@ -123,6 +169,23 @@ main
   padding-left: 30px;
   font-size: 1.5rem;
   font-family 'Roboto-Italic','Avenir', Helvetica, Arial, sans-serif
+.deadline_date
+  margin-right: 5px
+.uploadFile
+  font-size: .5rem
+  display flex
+  line-height: 1rem;
+.fa-plus-square
+  cursor pointer
+  font-size: 1.95rem;
+  color: #C8C8C8;
+  transition: color .25s ease
+  &:hover
+    color #4A90E2
+.fileInfo
+  display block
+  margin-right: 20px;
+  color #757575
 footer
   text-align: center;
   padding: 30px;
