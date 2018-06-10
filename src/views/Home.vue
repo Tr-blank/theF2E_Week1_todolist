@@ -2,9 +2,9 @@
   <div class="home">
    <div class="homeHeader">
       <div class="homeNav navThree-now1">
-        <a class="navItem now" >My Tasks</a>
-        <a class="navItem" >In Progress</a>
-        <a class="navItem" >Completed</a>
+        <a class="homeNavItem now" page="1" >My Tasks</a>
+        <a class="homeNavItem" page="2">In Progress</a>
+        <a class="homeNavItem" page="3">Completed</a>
       </div>
     </div>
     <main>
@@ -32,14 +32,16 @@
           </li>
         </ul>
       </div>
+      
       <div class="listItem list-Important">
         <div class="listTitle">
           <div>
             <i class="icon fas fa-check-square"></i>
-            <span class="title">Type Something Here...</span>
+            <span class="title">123132</span>
           </div>
           <div>
-            <i class="icon far fa-star"></i>
+            <i v-if="complete" class="icon fas fa-star"></i>
+            <i v-else class="icon far fa-star"></i>
             <i class="icon fas fa-pencil-alt"></i>
           </div>
         </div>
@@ -85,3 +87,43 @@
     <footer>Copyright © 2018 By 提亞 All rights reserved</footer>
   </div>
 </template>
+<script>
+export default {
+  name: 'Home',
+  data:{
+
+      dataJson:[{
+        date:'2018-12-10',
+        title:'Type Something Here...',
+        important:false,
+        complete:false,
+        comment:'commentttttttt'
+      },
+      {
+        date:'2018-12-10',
+        title:'Type Something Here...',
+        important:false,
+        complete:false,
+        comment:'commentttttttt'
+      },
+      {
+        date:'2018-12-10',
+        title:'Type Something Here...',
+        important:false,
+        complete:false,
+        comment:'commentttttttt'
+      }],
+      complete :false,
+      checkedState:true,
+
+  },
+  methods: {
+  },
+  computed: {
+  }
+}
+</script>
+<style lang="stylus">
+@import '../stylus/basic'
+@import '../stylus/home'
+</style>

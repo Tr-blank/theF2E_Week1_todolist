@@ -21,8 +21,7 @@
 
 <style lang="stylus">
 @import 'stylus/normalize'
-@import 'stylus/basic'
-@import 'stylus/home'
+
 header
   position: fixed;
   width: 320px;
