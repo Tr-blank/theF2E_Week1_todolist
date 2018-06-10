@@ -1,0 +1,42 @@
+header
+  background-color: #4A90E2
+nav
+  x-inner()
+  display: table;
+  width: 100%;
+  position: relative
+  &::after
+    content ""
+    display: inline-block
+    position:  absolute    
+    bottom:  0
+    width 33.33%
+    border-bottom:  5px solid #00408B 
+    transition: left .25s ease
+.navItem
+  height: 76px;
+  color: #00408b;
+  display: table-cell;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  width: 33.33%;
+  text-align: center;
+  vertical-align: middle;
+  transition: color .25s ease
+  &:hover
+    color #000
+  &.now
+    color #fff
+.navThree-now1::after
+  left 0px
+.navThree-now2::after
+  left 33.33%
+.navThree-now3::after
+  left 66.66%
+
+main
+  x-inner()
+.listItem
+  margin 10px 0
+  background-color: #F2F2F2
+  padding  10px
